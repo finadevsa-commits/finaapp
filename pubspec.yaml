@@ -1,0 +1,80 @@
+name: my_finaapp
+description: MY FINAAPP - Application bancaire mobile FINADEV SA
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+  flutter:
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Navigation & State Management ──────────────────────────────────────────
+  get: ^4.6.6                          # GetX : navigation + state + DI
+
+  # ── HTTP & Networking ──────────────────────────────────────────────────────
+  dio: ^5.4.0                          # Client HTTP
+  connectivity_plus: ^5.0.2           # Détection réseau
+
+  # ── Stockage local ────────────────────────────────────────────────────────
+  shared_preferences: ^2.2.2          # Préférences simples (token, rim, etc.)
+  flutter_secure_storage: ^9.0.0      # Stockage sécurisé PIN / token
+
+  # ── Authentification biométrique ──────────────────────────────────────────
+  local_auth: ^2.1.8                  # Fingerprint / Face ID
+
+  # ── UI & Design ──────────────────────────────────────────────────────────
+  google_fonts: ^6.1.0                # Polices Google
+  flutter_svg: ^2.0.9                 # Icônes SVG
+  lottie: ^3.0.0                      # Animations Lottie
+  shimmer: ^3.0.0                     # Effet skeleton loader
+  smooth_page_indicator: ^1.1.0       # Indicateur onboarding
+  pinput: ^5.0.0                      # Champ PIN stylisé
+  cupertino_icons: ^1.0.8
+
+  # ── QR Code ──────────────────────────────────────────────────────────────
+  qr_flutter: ^4.1.0                  # Génération QR Code
+  mobile_scanner: ^4.0.1             # Scanner QR Code
+
+  # ── Utilitaires ──────────────────────────────────────────────────────────
+  intl: ^0.19.0                       # Formatage dates et nombres FCFA
+  flutter_animate: ^4.5.0             # Animations fluides
+  cached_network_image: ^3.3.1        # Cache images
+  package_info_plus: ^5.0.1          # Version de l'app
+  device_info_plus: ^9.1.2           # Info appareil (device_id)
+  permission_handler: ^11.3.0        # Gestion permissions
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+# ── Launcher Icons ────────────────────────────────────────────────────────
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon_finadev.png"
+  adaptive_icon_background: "#7B1514"
+  adaptive_icon_foreground: "assets/images/icon_finadev_fg.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+    - assets/fonts/
+
+  fonts:
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans-Regular.ttf
+        - asset: assets/fonts/DMSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/DMSans-Bold.ttf
+          weight: 700
